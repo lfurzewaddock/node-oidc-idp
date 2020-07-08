@@ -1,0 +1,46 @@
+{
+  "env": {
+    "testIntegration": {
+      "plugins": ["istanbul"]
+    },
+    "testUnit": {
+      "plugins": ["istanbul", "@babel/plugin-transform-modules-commonjs"]
+    }
+  },
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "debug": true,
+        "useBuiltIns": "usage",
+        "corejs": { "version": 3, "proposals": false }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": false,
+        "corejs": { "version": 3, "proposals": false },
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
+      }
+    ],
+    "@babel/plugin-transform-async-to-generator",
+    [
+      "babel-plugin-named-asset-import",
+      {
+        "loaderMap": {
+          "svg": {
+            "ReactComponent": "@svgr/webpack?-prettier,-svgo![path]"
+          }
+        }
+      }
+    ]
+  ]
+}

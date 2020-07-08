@@ -1,0 +1,15 @@
+.section-container {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.map-container {
+  display: flex;
+  height: 100%;
+}

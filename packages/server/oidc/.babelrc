@@ -1,0 +1,10 @@
+{
+  "env": {
+    "testIntegration": {
+      "plugins": ["istanbul"]
+    },
+    "testUnit": {
+      "plugins": ["istanbul", "@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}

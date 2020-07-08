@@ -1,0 +1,26 @@
+{
+  "name": "node-oidc-idp",
+  "version": "1.0.0",
+  "description": "Node OIDC IdP",
+  "main": "index.js",
+  "scripts": {
+    "root:server:oidc:start:dev": "pnpm run -r server:oidc:start:dev",
+    "root:client:oidc:start:dev": "pnpm run -r client:oidc:start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfurzewaddock/node-oidc-idp.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "node",
+    "OIDC",
+    "OpenID Connect"
+  ],
+  "author": "Leo Furze-Waddock <leo@furze-waddock.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lfurzewaddock/node-oidc-idp/issues"
+  },
+  "homepage": "https://github.com/lfurzewaddock/node-oidc-idp#readme"
+}
