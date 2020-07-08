@@ -1,0 +1,4 @@
+{
+  "eslint.workingDirectories": ["packages/client/oidc", "packages/server/oidc"],
+  "prettier-eslint.eslintIntegration": true
+}
