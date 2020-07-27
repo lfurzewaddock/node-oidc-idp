@@ -3,6 +3,10 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
+const Dotenv = require("dotenv-webpack");
+const dotenv = require("dotenv");
+const { DefinePlugin } = require("webpack");
+
 const webpack = require("webpack");
 const path = require("path");
 
@@ -75,6 +79,10 @@ module.exports = {
     }),
     // Inlines the webpack runtime script. This script is too small to warrant a network request.
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
+    new Dotenv(),
+    new DefinePlugin({
+      "process.env": JSON.stringify(dotenv.config().parsed),
+    }),
   ],
   output: {
     path: path.resolve(__dirname, "../dist"),

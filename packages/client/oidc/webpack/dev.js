@@ -8,6 +8,11 @@ const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent")
 const config = require("./common");
 const vars = require("./vars");
 
+const {
+  OIDC_SERVER_BASE_URL_HOST,
+  OIDC_SERVER_BASE_URL_HOST_ALLOWED,
+} = process.env;
+
 // START Source: Create React App
 // https://github.com/facebook/create-react-app/packages/react-scripts/config/webpack.config.dev.js
 
@@ -53,6 +58,8 @@ module.exports = merge(config, {
   devtool: "inline-source-map",
   devServer: {
     hot: true,
+    host: OIDC_SERVER_BASE_URL_HOST,
+    allowedHosts: [OIDC_SERVER_BASE_URL_HOST_ALLOWED],
     contentBase: path.join(__dirname, "../dist"),
     historyApiFallback: true, // server support React Router v4: https://tylermcginnis.com/react-router-cannot-get-url-refresh/
     overlay: {

@@ -38,6 +38,8 @@ importers:
       clean-webpack-plugin: 3.0.0_webpack@4.43.0
       copy-webpack-plugin: 5.1.1_webpack@4.43.0
       css-loader: 3.6.0_webpack@4.43.0
+      dotenv: 8.2.0
+      dotenv-webpack: 2.0.0_webpack@4.43.0
       enzyme: 3.11.0
       enzyme-adapter-react-16: 1.15.2_df2dc313d8031f8c2dbd009d86ca7fc7
       eslint: 6.8.0
@@ -93,6 +95,8 @@ importers:
       copy-webpack-plugin: ^5.1.1
       core-js: ^3.6.4
       css-loader: ^3.4.2
+      dotenv: ^8.2.0
+      dotenv-webpack: ^2.0.0
       enzyme: ^3.11.0
       enzyme-adapter-react-16: ^1.15.2
       eslint: ^6.8.0
@@ -150,6 +154,7 @@ importers:
       '@istanbuljs/nyc-config-babel': 3.0.0_c4f13450b5ce39e116e3ffc85f655545
       babel-eslint: 10.1.0_eslint@7.4.0
       babel-plugin-istanbul: 6.0.0
+      dotenv: 8.2.0
       eslint: 7.4.0
       eslint-config-airbnb-base: 14.2.0_c68bb5016e109f58285db45d8cc55073
       eslint-config-prettier: 6.11.0_eslint@7.4.0
@@ -169,6 +174,7 @@ importers:
       '@istanbuljs/nyc-config-babel': ^3.0.0
       babel-eslint: ^10.1.0
       babel-plugin-istanbul: ^6.0.0
+      dotenv: ^8.2.0
       eslint: ^7.4.0
       eslint-config-airbnb-base: ^14.2.0
       eslint-config-prettier: ^6.11.0
@@ -3709,6 +3715,27 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7hwEmg6RiSQfm/GwPL4AAWXKy3YNNZA3oFv2Pdiey0mwkRCPZ9x6SZbkLcn8Ma5PYeVokzoD4Twv2n7LKp5WeA==
+  /dotenv-defaults/2.0.0:
+    dependencies:
+      dotenv: 8.2.0
+    dev: true
+    resolution:
+      integrity: sha512-8X8gQoM+BH0L/v+GwgpeNwrthbG2uTDVr3vkbedQPLrIalZE0vxB9LbuD+7echbiP7fAY3tE+pZI11R1DtlUNg==
+  /dotenv-webpack/2.0.0_webpack@4.43.0:
+    dependencies:
+      dotenv-defaults: 2.0.0
+      webpack: 4.43.0_webpack@4.43.0
+    dev: true
+    peerDependencies:
+      webpack: ^1 || ^2 || ^3 || ^4
+    resolution:
+      integrity: sha512-Omo5IpVl7XRgWXeZjxdfqOBEApJPxGLMOIx3F/w/W7ppUKgYMOXrk4eczlQrErPD4X0YRESlyGJek3O4uobRnw==
+  /dotenv/8.2.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
   /dotignore/0.1.2:
     dependencies:
       minimatch: 3.0.4

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:oidc:start:dev": "node -r esm ./src"
+    "server:oidc:start:dev": "node -r esm -r dotenv/config ./src"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "@istanbuljs/nyc-config-babel": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
