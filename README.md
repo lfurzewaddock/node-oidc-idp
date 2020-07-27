@@ -79,7 +79,7 @@ $ sudo su
 # openssl genrsa -aes256 -out private/cakey.pem 4096
 ```
 
-**Root certificate**
+**Root certificate**, using your own FQDN determined earlier
 
 ```
 # openssl req -new -x509 -key /root/ca/private/cakey.pem -out cacert.pem -days 3650 -set_serial 0
@@ -114,7 +114,7 @@ Generate a private key (without encryption) to avoid needing to set a passphrase
 # openssl genrsa -out localhost.pem 2048
 ```
 
-Create a CSR
+Create a CSR, using your own FQDN determined earlier
 
 ```
 # openssl req -new -key localhost_key.pem -out localhost.csr
@@ -168,7 +168,7 @@ Alter hosts file to point localhost.HP.localdomain to 127.0.0.1
 
 [https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
-Windows: Use 'Run as administrator' to open notepad. Then open file `c:\windows\system32\drivers\etc\hosts` and add the following line;
+Windows: Use 'Run as administrator' to open notepad. Then open file `c:\windows\system32\drivers\etc\hosts` and add the following line, using your own FQDN determined earlier;
 
 ```
 127.0.0.1 localhost.HP.localdomain
@@ -176,7 +176,7 @@ Windows: Use 'Run as administrator' to open notepad. Then open file `c:\windows\
 
 Copy the `localhost.pem` and `localhost_key.pem` to `/packages/server/oidc/` and `/packages/client/oidc/`
 
-**Hosts file**
+**Environment variables**
 
 - Rename `.env.example` to `.env` in `/packages/server/oidc/` and use your own FQDN
 - Rename `.env.example` to `.env` in `/packages/client/oidc/` and use your own FQDN
