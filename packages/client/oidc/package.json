@@ -54,7 +54,7 @@
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "4.0.0-beta.11",
     "jsdom": "16.2.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "nyc": "^14.1.1",
     "opn": "^5.5.0",
     "postcss-flexbugs-fixes": "^4.1.0",
